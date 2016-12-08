@@ -1,4 +1,4 @@
-package com.hibernate.learn;
+package com.hibernate.helloworld;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

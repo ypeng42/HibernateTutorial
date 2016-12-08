@@ -1,4 +1,4 @@
-package com.hibernate.learn;
+package com.hibernate.helloworld;
 
 import java.sql.*;
 

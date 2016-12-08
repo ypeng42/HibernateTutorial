@@ -22,7 +22,15 @@
             <version>5.2.5.Final</version>
         </dependency>
 
-        <!-- Google this or go to maven repo website (https://mvnrepository.com/) and search -->
+        <!-- Hibernate uses jboss-logging for logging, for the tutorials we will use the sl4fj-simple backend -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.7.5</version>
+        </dependency>
+
+        <!-- Not sure which version to download? Google this or go to maven repo website
+        (https://mvnrepository.com/) and search -->
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
