@@ -3,7 +3,7 @@ package com.hibernate.helloworld;
 import java.sql.*;
 
 public class JDBCExample {
-    
+
     // Note: naming for different DB (mysql, postgres, oracle, etc) are different, google yourself, should be easy
     static final String JDBC_DRIVER = "org.postgresql.Driver";
     static final String DB_URL = "jdbc:postgresql://localhost/testDB";
