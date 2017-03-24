@@ -9,7 +9,7 @@ import java.lang.reflect.Parameter;
 public class AnnotationMain {
     public static void main(String[] args) {
         // The other 2 ways to get class
-        // 1. Class.forName("xx.xx.MyClass")
+        // 1. Class.forName("xx.xx.MyClass") load dynamically
         // 2. obj.getClass()
 
         // when making change to custom annotation, be sure to update student class file, otherwise change
@@ -17,6 +17,7 @@ public class AnnotationMain {
         // there is some wired shit with annotation and retention policy...
         // delete target folder laos helps
         Class<Student> obj = Student.class;
+        System.out.println(obj.getName());
 
         // Note: annotation element can only be primitive type
 
