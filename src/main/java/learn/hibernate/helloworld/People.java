@@ -1,4 +1,4 @@
-package com.hibernate.helloworld;
+package learn.hibernate.helloworld;
 
 public class People {
     private String name;

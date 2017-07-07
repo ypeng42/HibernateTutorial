@@ -1,4 +1,4 @@
-package coreLearn;
+package learn.javaEnum;
 
 enum ColorEnum {
     RED,

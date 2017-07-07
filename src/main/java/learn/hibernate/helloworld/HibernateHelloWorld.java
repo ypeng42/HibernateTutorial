@@ -1,4 +1,4 @@
-package com.hibernate.helloworld;
+package learn.hibernate.helloworld;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -32,8 +32,8 @@ public class HibernateHelloWorld {
         // create people
         Session session = sessionFactory.openSession();
         session.beginTransaction();
-        session.save( new People("Tom", 3));
-        session.save( new People("Jerry", 5));
+        session.save( new People("Tom", 13));
+        session.save( new People("Jerry", 7));
         session.getTransaction().commit();
         session.close();
 

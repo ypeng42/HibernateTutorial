@@ -1,16 +1,15 @@
-package com.hibernate.helloworld;
+package learn.hibernate.helloworld;
 
 import java.sql.*;
 
 public class JDBCExample {
 
-    // Note: naming for different DB (mysql, postgres, oracle, etc) are different, google yourself, should be easy
-    static final String JDBC_DRIVER = "org.postgresql.Driver";
-    static final String DB_URL = "jdbc:postgresql://localhost/testDB";
+    private static final String JDBC_DRIVER = "org.postgresql.Driver";
+    private static final String DB_URL = "jdbc:postgresql://localhost/testDB";
 
     //  Database credentials
-    static final String USER = "postgres";
-    static final String PASS = "123";
+    private static final String USER = "postgres";
+    private static final String PASS = "123";
 
     public static void main(String[] args) {
         Connection conn = null;
@@ -27,18 +26,18 @@ public class JDBCExample {
             System.out.println("Creating statement...");
             stmt = conn.createStatement();
             String sql;
-            sql = "SELECT name, age FROM people";
+            sql = "SELECT name, person_id FROM people";
             ResultSet rs = stmt.executeQuery(sql);
 
             //STEP 5: Extract data from result set
             while (rs.next()) {
                 //Retrieve by column name
                 String name = rs.getString("name");
-                int age = rs.getInt("age");
+                int age = rs.getInt("person_id");
 
                 //Display values
                 System.out.print("Name: " + name);
-                System.out.print(", Age: " + age);
+                System.out.print(", person_id: " + age);
             }
             //STEP 6: Clean-up environment
             rs.close();
@@ -55,15 +54,15 @@ public class JDBCExample {
             try {
                 if (stmt != null)
                     stmt.close();
-            } catch (SQLException se2) {
-            }// nothing we can do
+            } catch (SQLException se2) {}
+
             try {
                 if (conn != null)
                     conn.close();
             } catch (SQLException se) {
                 se.printStackTrace();
-            }//end finally try
-        }//end try
-        System.out.println("Goodbye!");
+            }
+        }
+        System.out.println("\nGoodbye!");
     }
 }
