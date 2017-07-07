@@ -1,4 +1,4 @@
-package reflectionLearn;
+package learn.annotation;
 
 /**
  * Created by yqpen on 2/10/2017.

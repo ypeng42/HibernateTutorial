@@ -1,1 +1,1 @@
-# HibernateTutorial
+# tutorial about some common Java libraries 

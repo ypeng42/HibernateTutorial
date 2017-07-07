@@ -68,7 +68,7 @@
                     <archive>
                         <manifest>
                             <!-- Jar file entry point -->
-                            <mainClass>reflectionLearn.ReflectionMain</mainClass>
+                            <mainClass>learn.reflection.ReflectionMain</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

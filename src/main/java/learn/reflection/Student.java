@@ -1,4 +1,6 @@
-package reflectionLearn;
+package learn.reflection;
+
+import learn.annotation.MyAnno;
 
 @MyAnno(place = "Student Class Annotation", setting = "class setting")
 public class Student {

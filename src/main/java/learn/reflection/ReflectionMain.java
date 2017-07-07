@@ -1,5 +1,6 @@
-package reflectionLearn;
+package learn.reflection;
 
+import learn.annotation.MyAnno;
 import org.reflections.Reflections;
 
 import java.lang.reflect.Method;
@@ -29,7 +30,7 @@ public class ReflectionMain {
 
     public static void invokeMethod() {
         try {
-            Class c = Class.forName("reflectionLearn.Simple");
+            Class c = Class.forName("learn.reflection.Simple");
             Object o = c.newInstance();
             Method m = c.getDeclaredMethod("callMessage", String.class);
             m.setAccessible(true);
@@ -45,7 +46,7 @@ public class ReflectionMain {
             // need to include the package name (full name)
 //            Class c = Class.forName("Simple");
 
-            Class c = Class.forName("reflectionLearn.Simple");
+            Class c = Class.forName("learn.reflection.Simple");
             Simple s = (Simple)c.newInstance();
             s.message();
 
