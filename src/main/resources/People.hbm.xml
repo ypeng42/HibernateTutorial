@@ -7,10 +7,12 @@
 <hibernate-mapping package="learn.hibernate.helloworld">
 
     <class name="learn.hibernate.helloworld.People" table="People">
+        <!-- id defines primary key -->
         <id name="id" column="person_id">
+            <!-- The generator element informs Hibernate about which strategy is used to generated primary key values for this entity. -->
             <generator class="increment"/>
         </id>
-        <property name="age"/>
+        <property name="age" type="integer"/>
         <property name="name"/>
     </class>
 

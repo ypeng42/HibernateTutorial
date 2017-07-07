@@ -6,7 +6,12 @@ public class People {
 
     private int id;
 
-    // this form used by Hibernate
+    /**
+     * The no-argument constructor, which is also a JavaBean convention, is a requirement for all persistent classes.
+     * Hibernate needs to create objects for you, using Java Reflection. The constructor can be private.
+     * However, package or public visibility is required for runtime proxy generation and efficient data retrieval
+     * without bytecode instrumentation.
+     */
     public People() {
 
     }
