@@ -43,6 +43,21 @@ public class JDBCExample {
             rs.close();
             stmt.close();
             conn.close();
+
+            /*
+             * Read this about commit and rollback:
+             * https://stackoverflow.com/questions/15031866/jdbc-is-con-rollback-has-effect-only-ifcon-commit-not-succeeded
+             *
+             * This one about auto commit:
+             * https://stackoverflow.com/questions/10457335/commit-or-conn-setautocommittrue
+             *
+             * about transaction:
+             * https://stackoverflow.com/questions/4940648/how-to-start-a-transaction-in-jdbc/4940691
+             *
+             * isolation level:
+             * https://en.wikipedia.org/wiki/Isolation_(database_systems)#Phantom_reads
+             *
+             */
         } catch (SQLException se) {
             //Handle errors for JDBC
             se.printStackTrace();
