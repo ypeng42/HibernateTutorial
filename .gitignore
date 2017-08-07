@@ -16,6 +16,7 @@ target/
 
 # IntelliJ
 /out/
+hibernateTutorial.iml
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
